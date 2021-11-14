@@ -1,12 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Rubik";
 }
 
-:root{
-    
+:root {
     /* Primary */
     --Blue: hsl(246, 80%, 60%);
 
@@ -23,9 +22,11 @@
     --Dark-blue: hsl(235, 46%, 20%);
     --Desaturated-blue: hsl(235, 45%, 61%);
     --Pale-Blue: hsl(236, 100%, 87%);
+    --Corner-radius: 15px;
+    --Padding-sides: 20px;
 }
 
-body{
+body {
     background: var(--Very-dark-blue);
     color: white;
     display: flex;
@@ -34,27 +35,75 @@ body{
     min-height: 100vh;
 }
 
-
-.parent{
+.parent {
     display: grid;
-    grid-template-columns: repeat(4 , 1fr);
+    gap: 1.4em;
+    grid-template-columns: repeat(4, 1fr);
     width: 80%;
     margin: auto;
+    max-width: 1000px;
 }
 
-.profile{
+.profile {
     grid-row: 1 / 3;
 }
-
 
 .attribution {
     font-size: 11px;
     text-align: center;
     position: absolute;
     bottom: 0;
-    left:0;
+    left: 0;
     right: 0;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.profile img {
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+    margin-bottom: 0.9em;
+}
+
+.profile-top {
+    background: var(--Blue);
+    border-radius: var(--Corner-radius);
+    padding: 1.5em var(--Padding-sides) 3.3em;
+    transform: translateY(10px);
+}
+
+.profile-top span {
+    font-size: 0.6rem;
+    color: var(--Pale-Blue);
+}
+
+.profile-top p {
+    margin-top: 0.2em;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.profile-down {
+    background: var(--Dark-blue);
+    border-radius: 0 0 var(--Corner-radius) var(--Corner-radius);
+
+    padding: var(--Padding-sides);
+}
+
+.profile-down a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+
+.active {
+    color: #fff !important;
+}
+
+.profile-down li {
+    list-style: none;
+    margin: 0.5em 0;
 }
