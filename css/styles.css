@@ -20,6 +20,7 @@
 
     --Very-dark-blue: hsl(226, 43%, 10%);
     --Dark-blue: hsl(235, 46%, 20%);
+    --Active-blue: hsl(236, 40%, 35%);
     --Desaturated-blue: hsl(235, 45%, 61%);
     --Pale-Blue: hsl(236, 100%, 87%);
     --Corner-radius: 15px;
@@ -128,6 +129,7 @@ body {
     border-radius: var(--Corner-radius);
     padding: var(--Padding-sides);
     transform: translateY(-10px);
+    cursor: pointer;
 }
 
 .wrapper p{
@@ -137,6 +139,11 @@ body {
 
 .wrapper img{
     width: 15px;
+    cursor: pointer;
+}
+
+.wrapper:hover{
+    background: var(--Active-blue);
 }
 
 .wrapper div:nth-of-type(1){
