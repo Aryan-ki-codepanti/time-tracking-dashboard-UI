@@ -107,3 +107,38 @@ body {
     list-style: none;
     margin: 0.5em 0;
 }
+
+
+/* Tasks  */
+
+.task h1{
+    font-size: 2.7rem;
+    font-weight: 300;
+    margin-top: 0.35em;
+}
+.task span {
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: var(--Pale-Blue);
+}
+
+.wrapper{
+    background: var(--Dark-blue);
+    border-radius: var(--Corner-radius);
+    padding: var(--Padding-sides);
+}
+
+.wrapper p{
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.wrapper img{
+    width: 15px;
+}
+
+.wrapper div:nth-of-type(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
