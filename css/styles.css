@@ -71,8 +71,9 @@ body {
 .profile-top {
     background: var(--Blue);
     border-radius: var(--Corner-radius);
-    padding: 1.5em var(--Padding-sides) 3.3em;
+    padding: calc(2em + 2px) var(--Padding-sides) 3.3em;
     transform: translateY(10px);
+    margin-top: -10px;
 }
 
 .profile-top span {
@@ -126,6 +127,7 @@ body {
     background: var(--Dark-blue);
     border-radius: var(--Corner-radius);
     padding: var(--Padding-sides);
+    transform: translateY(-10px);
 }
 
 .wrapper p{
@@ -141,4 +143,51 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Background images */
+.bg{
+    display: flex;
+    justify-content: flex-end;
+    border-radius: var(--Corner-radius) var(--Corner-radius) 0 0; 
+    padding: 0 0.3em 1em;
+    position: relative;
+    height: 41px;
+    overflow: hidden;
+}
+
+.bg img{
+    width: 50px;
+    position: absolute;
+    right: 16px;
+    top: -1px;
+}
+
+.bg-work{
+    background: var(--Light-red-work);
+}
+
+.bg-play{
+    background: var(--Soft-blue-play);
+}
+
+.bg-study{
+    background: var(--Light-red-study);
+}
+
+.bg-excercise{
+    background: var(--Lime-green-exercise);
+}
+
+.bg-social{
+    background: var(--Violet-social);
+}
+
+.bg-self-care{
+    background: var(--Soft-orange-selfcare);
+}
+
+.bg-self-care img{
+    width: 45px;
+    top: -8px;
 }
