@@ -6,6 +6,11 @@ const exerciseBox = document.querySelector(".exercise");
 const socialBox = document.querySelector(".social");
 const selfCareBox = document.querySelector(".self-care");
 
+
+const weekLink = "";
+const dayLink = "";
+const monthLink = "";
+
 // Datafile
 const file = "../data.json";
 
@@ -22,44 +27,44 @@ const weekClick = async () => {
         switch (task.title) {
             case "Work":
                 workBox.querySelector("h1").innerText = `${task
-                .timeframes.weekly.current}`;
+                .timeframes.weekly.current}hrs`;
                 workBox.querySelector("span").innerText = `Last Week - ${task
-                .timeframes.weekly.previous}`;
+                .timeframes.weekly.previous}hrs`;
                 break;
         
             case "Play":
                 playBox.querySelector("h1").innerText = `${task
-                .timeframes.weekly.current}`;
+                .timeframes.weekly.current}hrs`;
                 playBox.querySelector("span").innerText = `Last Week - ${task
-                .timeframes.weekly.previous}`;
+                .timeframes.weekly.previous}hrs`;
                 break;
         
             case "Study":
-                workBox.querySelector("h1").innerText = `${task
-                .timeframes.weekly.current}`;
-                workBox.querySelector("span").innerText = `Last Week - ${task
-                .timeframes.weekly.previous}`;
+                studyBox.querySelector("h1").innerText = `${task
+                .timeframes.weekly.current}hrs`;
+                studyBox.querySelector("span").innerText = `Last Week - ${task
+                .timeframes.weekly.previous}hrs`;
                 break;
         
             case "Exercise":
-                workBox.querySelector("h1").innerText = `${task
-                .timeframes.weekly.current}`;
-                workBox.querySelector("span").innerText = `Last Week - ${task
-                .timeframes.weekly.previous}`;
+                exerciseBox.querySelector("h1").innerText = `${task
+                .timeframes.weekly.current}hrs`;
+                exerciseBox.querySelector("span").innerText = `Last Week - ${task
+                .timeframes.weekly.previous}hrs`;
                 break;
         
             case "Social":
-                workBox.querySelector("h1").innerText = `${task
-                .timeframes.weekly.current}`;
-                workBox.querySelector("span").innerText = `Last Week - ${task
-                .timeframes.weekly.previous}`;
+                socialBox.querySelector("h1").innerText = `${task
+                .timeframes.weekly.current}hrs`;
+                socialBox.querySelector("span").innerText = `Last Week - ${task
+                .timeframes.weekly.previous}hrs`;
                 break;
         
             case "Self Care":
-                workBox.querySelector("h1").innerText = `${task
-                .timeframes.weekly.current}`;
-                workBox.querySelector("span").innerText = `Last Week - ${task
-                .timeframes.weekly.previous}`;
+                selfCareBox.querySelector("h1").innerText = `${task
+                .timeframes.weekly.current}hrs`;
+                selfCareBox.querySelector("span").innerText = `Last Week - ${task
+                .timeframes.weekly.previous}hrs`;
                 break;
         
             default:
@@ -67,3 +72,112 @@ const weekClick = async () => {
         }
     })
 };
+
+
+const dayClick = async () => {
+    const data = await getData();
+
+    data.forEach(task => {
+        switch (task.title) {
+            case "Work":
+                workBox.querySelector("h1").innerText = `${task
+                .timeframes.daily.current}hrs`;
+                workBox.querySelector("span").innerText = `Last Day - ${task
+                .timeframes.daily.previous}hrs`;
+                break;
+        
+            case "Play":
+                playBox.querySelector("h1").innerText = `${task
+                .timeframes.daily.current}hrs`;
+                playBox.querySelector("span").innerText = `Last Day - ${task
+                .timeframes.daily.previous}hrs`;
+                break;
+        
+            case "Study":
+                studyBox.querySelector("h1").innerText = `${task
+                .timeframes.daily.current}hrs`;
+                studyBox.querySelector("span").innerText = `Last Day - ${task
+                .timeframes.daily.previous}hrs`;
+                break;
+        
+            case "Exercise":
+                exerciseBox.querySelector("h1").innerText = `${task
+                .timeframes.daily.current}hrs`;
+                exerciseBox.querySelector("span").innerText = `Last Day - ${task
+                .timeframes.daily.previous}hrs`;
+                break;
+        
+            case "Social":
+                socialBox.querySelector("h1").innerText = `${task
+                .timeframes.daily.current}hrs`;
+                socialBox.querySelector("span").innerText = `Last Day - ${task
+                .timeframes.daily.previous}hrs`;
+                break;
+        
+            case "Self Care":
+                selfCareBox.querySelector("h1").innerText = `${task
+                .timeframes.daily.current}hrs`;
+                selfCareBox.querySelector("span").innerText = `Last Day - ${task
+                .timeframes.daily.previous}hrs`;
+                break;
+        
+            default:
+                break;
+        }
+    })
+};
+
+const monthClick = async () => {
+    const data = await getData();
+
+    data.forEach(task => {
+        switch (task.title) {
+            case "Work":
+                workBox.querySelector("h1").innerText = `${task
+                .timeframes.monthly.current}hrs`;
+                workBox.querySelector("span").innerText = `Last Month - ${task
+                .timeframes.monthly.previous}hrs`;
+                break;
+        
+            case "Play":
+                playBox.querySelector("h1").innerText = `${task
+                .timeframes.monthly.current}hrs`;
+                playBox.querySelector("span").innerText = `Last Month - ${task
+                .timeframes.monthly.previous}hrs`;
+                break;
+        
+            case "Study":
+                studyBox.querySelector("h1").innerText = `${task
+                .timeframes.monthly.current}hrs`;
+                studyBox.querySelector("span").innerText = `Last Month - ${task
+                .timeframes.monthly.previous}hrs`;
+                break;
+        
+            case "Exercise":
+                exerciseBox.querySelector("h1").innerText = `${task
+                .timeframes.monthly.current}hrs`;
+                exerciseBox.querySelector("span").innerText = `Last Month - ${task
+                .timeframes.monthly.previous}hrs`;
+                break;
+        
+            case "Social":
+                socialBox.querySelector("h1").innerText = `${task
+                .timeframes.monthly.current}hrs`;
+                socialBox.querySelector("span").innerText = `Last Month - ${task
+                .timeframes.monthly.previous}hrs`;
+                break;
+        
+            case "Self Care":
+                selfCareBox.querySelector("h1").innerText = `${task
+                .timeframes.monthly.current}hrs`;
+                selfCareBox.querySelector("span").innerText = `Last Month - ${task
+                .timeframes.monthly.previous}hrs`;
+                break;
+        
+            default:
+                break;
+        }
+    })
+};
+
+weekClick();
