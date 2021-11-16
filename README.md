@@ -48,21 +48,6 @@ Users should be able to:
 
 ### What I learned
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
 I learnt quite interesting things while making this project
 One of them being having vertically center grid on body with floating bottom footer of attribution
