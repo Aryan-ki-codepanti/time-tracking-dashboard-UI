@@ -7,9 +7,9 @@ const socialBox = document.querySelector(".social");
 const selfCareBox = document.querySelector(".self-care");
 
 
-const weekLink = "";
-const dayLink = "";
-const monthLink = "";
+const weekLink = document.querySelector(".weekLink");
+const dayLink = document.querySelector(".dayLink");
+const monthLink = document.querySelector(".monthLink");
 
 // Datafile
 const file = "../data.json";
@@ -23,6 +23,12 @@ const getData = async () => {
 const weekClick = async () => {
     const data = await getData();
 
+    // Changing active links
+    weekLink.classList.add("active");
+    dayLink.classList.remove("active");
+    monthLink.classList.remove("active");
+
+    // Changing data
     data.forEach(task => {
         switch (task.title) {
             case "Work":
@@ -77,6 +83,12 @@ const weekClick = async () => {
 const dayClick = async () => {
     const data = await getData();
 
+    // Changing active links
+    dayLink.classList.add("active");
+    weekLink.classList.remove("active");
+    monthLink.classList.remove("active");
+
+    // Changing data
     data.forEach(task => {
         switch (task.title) {
             case "Work":
@@ -129,6 +141,13 @@ const dayClick = async () => {
 
 const monthClick = async () => {
     const data = await getData();
+
+    // Changing active links
+    monthLink.classList.add("active");
+    weekLink.classList.remove("active");
+    dayLink.classList.remove("active");
+
+    // Changing data
 
     data.forEach(task => {
         switch (task.title) {
